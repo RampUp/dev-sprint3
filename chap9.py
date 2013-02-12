@@ -31,8 +31,15 @@ def prompt_user():
 	forbidden = raw_input("enter a string of forbidden letters: ")
 	print read_file_avoids(forbidden)
 
+def uses_only(word, allowed):
+	for c in word:
+		if c not in allowed:
+			return False
+	return True
 
-prompt_user()
+print uses_only('alfalfa', 'alf')
+print uses_only('anthony', 'the')
+#prompt_user()
 
 """read_file()
 print has_no_e('this')
