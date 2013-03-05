@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block body %}
-	<h2>Asteroids</h2>
-	<h12>This is a work-in-progress</h12>
+	<p>Asteroids</p>
+	<p>This is a work-in-progress</p>
 	{% with messages = get_flashed_messages() %}
 		{% if messages %}
 			Results:
 			<pre>
 				{% for message in messages %}
-{{ message }}
+                    {{ message }}
 				{% endfor %}
 			</pre>
 		{% endif %}
